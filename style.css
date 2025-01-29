@@ -25,6 +25,7 @@ nav ul {
     display: flex;
     justify-content: center;
     margin-top: 70px;
+    position: relative;
 }
 
 .container{
@@ -32,6 +33,7 @@ nav ul {
     grid-template-rows: repeat(3,10vw);
     grid-template-columns: repeat(3,10vw);
     font-family: "Lato","sans-serif";
+    position: relative;
 }
 
 .box{
@@ -92,4 +94,47 @@ nav ul {
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.line{
+    background-color: black;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transition: width 1s ease-in-out;
+    background-color: rgb(94, 29, 207);
+    border-radius: 4px;
+    
+}
+
+@media screen and (max-width:800px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 60px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+    #reset{
+        margin-right: 0;
+        margin-left: 2px;
+    }
+    #stopmusic{
+        margin-left:2px;
+        margin-right: 0;
+    }
+    #inforeset{
+        left: 4px;
+    }
+    .imgbox img{
+        width: 100px;
+        height: 50vw;
+    }
 }
